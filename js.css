@@ -1,0 +1,103 @@
+#a{
+    height:300px;
+    width:300px;
+    background-color:black;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+#b{
+    color:white;
+} 
+
+#main{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:50px;
+    
+}
+
+#button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:50px;
+   
+}
+button{
+    background-color:rgb(220, 20, 193);
+    color:rgb(4, 4, 39);
+}
+
+div button{
+    margin-right:35px;
+    width: 60px;
+}
+
+
+h1{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:aqua;
+    margin-top:70px;
+}
+
+body{
+   
+    background-image: url("game.jpg");
+
+  /* Full height */
+ 
+  width:100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+body{
+    height: 700px;
+
+}
+
+#rules{
+    height: 100px;
+    width:271px;
+    background-color:rgba(0, 0, 0, 0.034);
+    color:aliceblue;
+    margin-left:605px;
+    margin: top 50px;
+}
+
+div h4{
+    margin-left:20px;
+
+}
+#x{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:rgb(236, 238, 241);
+}
+
+#refresh{
+    background-color:rgba(0, 0, 0, 0);
+    border-style:dashed;
+    border-color:rgb(220, 20, 193);
+    color:white;
+    width: 100px;
+}
+.bo{
+    border-style:dashed;
+    border-color:rgba(128, 255, 0, 0.859);
+    width: 70px;
+    border-width:3px;
+    font-weight:bold;
+    color:white;
+    background-color: black;
+    
+}

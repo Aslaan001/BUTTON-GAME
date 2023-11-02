@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="js.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>BUTTON PRESS GAME</h1>
+    
+    <div id="main">
+        
+
+    <div id="a"><h2 id="b">TRY YOUR LUCK</h2></div>
+    <br>
+    
+    </div>
+    <div id="button">
+        <button onclick="f1('RED')"  class="bo">click</button>
+        <button onclick="f1('GREEN')" class="bo">click</button>
+        <button onclick="f1('BLUE')"  class="bo">click</button>
+        <button onclick="f1('BLACK')"  class="bo">click</button>
+        <button onclick="window.location.reload();"   id="refresh">PLAY-AGAIN</button>
+    </div>
+  <br>
+  <br>
+    <div id="rules"><h3 id="x">-: RULES :-</h3>
+    <h4>~ Select any button out of four</h4>
+    <h4>~ Only one chance is given.</h4>
+    <h4>~ One button will make you winner</h4>
+</div>
+
+
+    <script>
+        function f1(c){
+            var x=document.getElementById('a');    // y =  h1 denote   .....
+            var y=document.getElementById('b');    // x denote main box div....
+            x.style.backgroundColor=c;
+            if(c=='BLACK'){
+                y.innerHTML=" ";
+                x.style.backgroundImage="url('win.jpg')";
+                x.style.backgroundRepeat="no-repeat";
+                x.style.backgroundSize="300px 300px";
+            }
+            if(c=='BLUE'){
+                y.innerHTML=" ";
+                x.style.backgroundImage="url('lose.png')";
+                x.style.backgroundRepeat="no-repeat";
+                x.style.backgroundSize="300px 300px";
+                
+            }
+            if(c=='GREEN'){
+                y.innerHTML=" ";
+                x.style.backgroundImage="url('fuck.jpg')";
+                x.style.backgroundRepeat="no-repeat";
+                x.style.backgroundSize="300px 300px";
+            }
+            if(c=='RED'){
+                x.style.backgroundColor=c;
+                y.innerHTML="OOPS !.. YOU LOOSE THE GAME";
+
+            }
+            
+        }
+
+
+        
+    </script>
+</body>
+</html>
