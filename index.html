@@ -13,15 +13,15 @@
     <div id="main">
         
 
-    <div id="a"><h2 id="b">TRY YOUR LUCK</h2></div>
+    <div id="a"><h2 id="b">TRY YOUR LUCK <br></h2></div>
     <br>
     
     </div>
     <div id="button">
-        <button onclick="f1('RED')"  class="bo">click</button>
-        <button onclick="f1('GREEN')" class="bo">click</button>
-        <button onclick="f1('BLUE')"  class="bo">click</button>
-        <button onclick="f1('BLACK')"  class="bo">click</button>
+        <button  class="bo">click</button>
+        <button  class="bo">click</button>
+        <button  class="bo">click</button>
+        <button  class="bo">click</button>
         <button onclick="window.location.reload();"   id="refresh">PLAY-AGAIN</button>
     </div>
   <br>
@@ -34,38 +34,56 @@
 
 
     <script>
-        function f1(c){
+        
             var x=document.getElementById('a');    // y =  h1 denote   .....
             var y=document.getElementById('b');    // x denote main box div....
-            x.style.backgroundColor=c;
-            if(c=='BLACK'){
-                y.innerHTML=" ";
-                x.style.backgroundImage="url('win.jpg')";
-                x.style.backgroundRepeat="no-repeat";
-                x.style.backgroundSize="300px 300px";
-            }
-            if(c=='BLUE'){
-                y.innerHTML=" ";
-                x.style.backgroundImage="url('lose.png')";
-                x.style.backgroundRepeat="no-repeat";
-                x.style.backgroundSize="300px 300px";
-                
-            }
-            if(c=='GREEN'){
-                y.innerHTML=" ";
-                x.style.backgroundImage="url('fuck.jpg')";
-                x.style.backgroundRepeat="no-repeat";
-                x.style.backgroundSize="300px 300px";
-            }
-            if(c=='RED'){
-                x.style.backgroundColor=c;
-                y.innerHTML="OOPS !.. YOU LOOSE THE GAME";
-
-            }
+            //x.style.backgroundColor=c;
             
-        }
+            
+        
+        
 
+        let r=Math.random();
+        r=Math.floor(r*3)+1;
+        console.log(r);
+        
+        const a=document.querySelector("#button");
+        a.addEventListener('click',(e)=>{
+           e.preventDefault();
+           let r=Math.random();
+           r=Math.floor(r*4)+1;
+           //   console.log(r);
 
+           if(r==1){
+            x.innerHTML="";
+            x.style.backgroundImage="url('win.jpg')";
+            x.style.backgroundRepeat="no-repeat";
+            x.style.backgroundSize="300px 300px";
+           }
+
+           if(r==2){
+            x.innerHTML="";
+            x.style.backgroundImage="url('over.jpg')";
+            x.style.backgroundRepeat="no-repeat";
+            x.style.backgroundSize="300px 300px";
+           }
+
+           if(r==3){
+            x.innerHTML="";
+            x.style.backgroundImage="url('fuck.jpg')";
+            x.style.backgroundRepeat="no-repeat";
+            x.style.backgroundSize="300px 300px";
+           }
+
+           if(r==4){
+            x.innerHTML="";
+            x.style.backgroundImage="url('lose.png')";
+            x.style.backgroundRepeat="no-repeat";
+            x.style.backgroundSize="300px 300px";
+           }
+
+          
+        })
         
     </script>
 </body>
